@@ -39,6 +39,14 @@ module.exports = {
       query: {
         presets: ['es2015']
       }
+    }, {
+      include: APP_PATH,
+      test: /\.png$/,
+      loader: 'url-loader?limit=100000'
+    }, { 
+      include: APP_PATH,
+      test: /\.jpg$/, 
+      loader: 'file-loader' 
     }]
   },
 
