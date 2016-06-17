@@ -1,6 +1,9 @@
-import './scss/main.scss';
+import './scss/main.scss'
 
-let app = document.createElement('div');
+let app = document.createElement('div')
+let txt = ''
+let xx = [1, 2]
 
-app.innerHTML = 'laal';
-document.body.appendChild(app);
+xx.forEach((a, b) => { txt += a })
+app.innerHTML = txt
+document.body.appendChild(app)
