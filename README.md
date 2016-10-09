@@ -1,6 +1,17 @@
 # webpack scaffolding
 
-基于webpack的脚手架, 前端框架未定
+基于webpack的脚手架, 前端框架可以自己选择, 比如ReactJs...
+
+## 目前已有demo
+
+主要实现了网易前端大作业的内容:
+
+- [查看效果](http://jerryni.github.io/netease/homework/)
+- [查看作业说明及原生js实现版本(也就是第一次完成的版本)](https://github.com/jerryni/netease)
+
+切到相关分支查看源码(运行需要在本地查看):
+
+- [使用Regularjs来重写](https://github.com/jerryni/webpack-app/tree/regularjs)
 
 ## Start 
 
@@ -16,10 +27,6 @@ build
 
 - es2015
 - scss
-
-## 目前已经有的demo
-
-- regularjs 请切换到regularjs分支查看
 
 ## 目录结构说明
 
