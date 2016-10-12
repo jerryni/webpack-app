@@ -1,39 +1,37 @@
 # webpack scaffolding
 
-基于webpack的脚手架, 前端框架可以自己选择, 比如ReactJs...
+easy, clean, none-framework scaffolding
 
-## 目前已有demo
+## Environment
 
-主要实现了网易前端大作业的内容:
+node: v4.6.0(official recommend)
 
-- [查看效果](http://jerryni.github.io/netease/homework/)
-- [查看作业说明及原生js实现版本(也就是第一次完成的版本)](https://github.com/jerryni/netease)
+## Features
 
-切到相关分支查看源码(运行需要在本地查看):
-
-- [使用Regularjs来重写](https://github.com/jerryni/webpack-app/tree/regularjs)
+- es2015
+- scss
+- eslint
+- file-loader
+- url-loader
+- html-loader
 
 ## Start 
 
 > npm install
 
 develop:
+
 > npm start
 
 build
 > npm build
 
-## Features
-
-- es2015
-- scss
-
-## 目录结构说明
+## file tree
 
 ```js
-├── app                       项目根目录
-│   ├── index.js              程序入口文件
-│   └── scss                  css文件夹
+├── app                       
+│   ├── index.js              
+│   └── scss                  
 │       └── main.scss
 ├── build                        
 │   ├── bundle.js

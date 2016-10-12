@@ -41,11 +41,11 @@ module.exports = {
             }
         }, {
             include: APP_PATH,
-            test: /\.png$/,
-            loader: 'url-loader?limit=100000'
+            test: /\.(png|jpg)$/,
+            loader: 'url-loader?limit=8192' //小于8k的图片, 一般就是雪碧图
         }, {
             include: APP_PATH,
-            test: /\.jpg$/,
+            test: /\.(jpe?g|png|gif|svg)$/,
             loader: 'file-loader'
         }, {
             test: /\.html$/,
