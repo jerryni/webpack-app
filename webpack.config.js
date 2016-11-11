@@ -19,7 +19,7 @@ module.exports = {
     // 输出路径( webpack打包完后 )
     output: {
         path: BUILD_PATH,
-        filename: '[name].js' // 他会根据entry的入口文件名称生成多个js文件
+        filename: '[name].[hash].js' // 他会根据entry的入口文件名称生成多个js文件
     },
 
     devtool: 'eval-source-map', // js source-map
