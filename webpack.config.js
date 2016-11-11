@@ -5,16 +5,24 @@ var htmlWebpackPlugin = require('html-webpack-plugin')
 var ROOT_PATH = path.resolve(__dirname)
 var APP_PATH = path.resolve(ROOT_PATH, 'app')
 var BUILD_PATH = path.resolve(ROOT_PATH, 'build')
+var TEM_PATH = path.resolve(ROOT_PATH, 'html_templates')
 
 module.exports = {
     // 项目入口文件
-    entry: APP_PATH,
+    entry: {
+        //三个入口文件，app, mobile和 vendors
+        app: path.resolve(APP_PATH, 'index.js'),
+        page1: path.resolve(APP_PATH, 'page1.js')
+        // vendors: ['jquery', 'moment']
+    },
 
     // 输出路径( webpack打包完后 )
     output: {
         path: BUILD_PATH,
-        filename: 'bundle.js'
+        filename: '[name].js' // 他会根据entry的入口文件名称生成多个js文件
     },
+
+    devtool: 'eval-source-map', // js source-map
 
     // 开发服务器 实时监控改变
     devServer: {
@@ -30,7 +38,7 @@ module.exports = {
             test: /\.scss$/, // 正则语法
 
             // 注意loaders的处理顺序是从右到左的
-            loaders: ['style', 'css', 'sass'],
+            loaders: ['style', 'css?sourceMap', 'sass?sourceMap'],
             include: APP_PATH
         }, {
             test: /\.jsx?$/,
@@ -53,10 +61,23 @@ module.exports = {
         }]
     },
 
-    // 插件, 自动生成一个html文件
+    // 插件, 自动生成html文件
     plugins: [
         new htmlWebpackPlugin({
-            title: 'hw app'
+            title: 'Hello World app',
+            template: path.resolve(TEM_PATH, 'index.html'),
+            filename: 'index.html',
+            //chunks这个参数告诉插件要引用entry里面的哪几个入口
+            chunks: ['app'],
+            //要把script插入到标签里
+            inject: 'body'
+        }),
+        new htmlWebpackPlugin({
+            title: 'Hello Mobile app',
+            template: path.resolve(TEM_PATH, 'page1.html'),
+            filename: 'page1.html',
+            chunks: ['page1'],
+            inject: 'body'
         })
     ]
 

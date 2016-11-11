@@ -19,12 +19,12 @@ node: v4.6.0(official recommend)
 
 > npm install
 
-develop:
+develop with live-server:
 
 > npm start
 
-build
-> npm build
+build files to path `./build`
+> webpack
 
 ## file tree
 
