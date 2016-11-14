@@ -14,6 +14,8 @@ node: v4.6.0(official recommend)
 - file-loader
 - url-loader
 - html-loader
+- sourcemap
+- multiple generate html-file
 
 ## Start 
 
