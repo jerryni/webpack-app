@@ -28,18 +28,6 @@ build files to path `./build`
 > webpack
 
 ## file tree
-├── README.md
-├── app
-│   ├── index.js
-│   ├── page1.js
-│   └── scss
-│       └── main.scss
-├── html_templates
-│   ├── index.html
-│   └── page1.html
-├── package.json
-└── webpack.config.js
-
 ```js
 ├── app                        // app入口
 │   ├── index.js              
