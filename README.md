@@ -1,4 +1,4 @@
-# webpack scaffolding
+# webpack starter
 
 easy, clean, none-framework scaffolding
 
