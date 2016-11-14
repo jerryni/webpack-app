@@ -1,6 +1,6 @@
 # webpack starter
 
-简洁的, 可自己选择js框架(reactjs, vuejs, angularjs)的webpack脚手架
+简洁的, 可自选js框架(reactjs, vuejs, angularjs)的webpack脚手架
 
 ## Environment
 
