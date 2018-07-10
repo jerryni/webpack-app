@@ -4,7 +4,7 @@ easy, clean, none-framework scaffolding
 
 ## Environment
 
-node: v4.6.0(official recommend)
+node: v8.x
 
 ## Features
 
@@ -13,18 +13,17 @@ node: v4.6.0(official recommend)
 - eslint
 - file-loader
 - url-loader
-- html-loader
 
 ## Start 
 
-> npm install
+> npm i
 
 develop with live-server:
 
-> npm start
+> npm run dev
 
 build files to path `./build`
-> webpack
+> npm run build
 
 ## file tree
 
