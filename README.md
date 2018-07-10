@@ -5,6 +5,7 @@
 ## Environment
 
 node: v4.6.0(官方推荐)
+node: v8.x
 
 ## 特性
 
@@ -13,19 +14,18 @@ node: v4.6.0(官方推荐)
 - eslint
 - file-loader, url-loader, html-loader
 - multiple generate html-file
-- sourcemap
 - hash
 
 ## Start 
 
-> npm install
+> npm i
 
 develop with live-server:
 
-> npm start
+> npm run dev
 
 build files to path `./build`
-> webpack
+> npm run build
 
 ## file tree
 ```js

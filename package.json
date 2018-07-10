@@ -5,34 +5,35 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --hot --inline",
-    "build": "webpack"
+    "dev": "webpack-dev-server",
+    "build": "rm -rf build && webpack --mode production"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "babel-core": "^6.18.2",
-    "babel-loader": "^6.2.7",
-    "babel-plugin-transform-runtime": "^6.15.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
     "babel-polyfill": "^6.16.0",
-    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-env": "^1.7.0",
     "babel-preset-stage-0": "^6.16.0",
-    "css-loader": "^0.23.0",
+    "css-loader": "^1.0.0",
     "eslint": "^2.12.0",
     "eslint-config-standard": "^5.3.1",
     "eslint-plugin-promise": "^1.3.2",
     "eslint-plugin-standard": "^1.3.2",
     "file-loader": "^0.8.5",
+    "handlebars-webpack-plugin": "github:mkungla/handlebars-webpack-plugin#911b9d1",
     "html-loader": "^0.4.3",
-    "html-webpack-plugin": "^1.7.0",
-    "node-sass": "^3.4.2",
-    "sass-loader": "^3.1.2",
-    "style-loader": "^0.13.0",
+    "html-webpack-plugin": "^3.2.0",
+    "node-sass": "^4.9.2",
+    "sass-loader": "^7.0.3",
+    "style-loader": "^0.21.0",
+    "transform-runtime": "^0.0.0",
     "url-loader": "^0.5.7",
-    "webpack": "^1.12.9",
-    "webpack-dev-server": "^1.14.0"
-  },
-  "dependencies": {
-    "babel-runtime": "^6.18.0"
+    "webpack": "^4.15.1",
+    "webpack-cli": "^3.0.8",
+    "webpack-command": "^0.4.1",
+    "webpack-dev-server": "^3.1.4",
+    "webpack-stylish": "^0.1.8"
   }
 }
