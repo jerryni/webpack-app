@@ -35,5 +35,8 @@
     "webpack-command": "^0.4.1",
     "webpack-dev-server": "^3.1.4",
     "webpack-stylish": "^0.1.8"
+  },
+  "engines": {
+    "node": ">=8.9.4"
   }
 }
