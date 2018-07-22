@@ -1,13 +1,10 @@
-# webpack starter
+# webpack base
 
-简洁的, 可自选js框架(reactjs, vuejs, angularjs)的webpack脚手架
+## feature
 
-## 特性
-
-- es2015, async/await
-- scss
+- babel
 - eslint
-- file-loader, url-loader, html-loader
+- scss-loader, file-loader, url-loader, html-loader
 - multiple entry
 
 ## Start 
@@ -23,16 +20,16 @@ build files to path `./build`
 
 ## file tree
 ```js
-├── app                        // app入口
-│   ├── index.js              
-│   └── scss                   // 样式文件夹
+├── app
+│   ├── index.js
+│   └── scss
 │       └── main.scss
-├── html_templates             // html模板
-│   ├── index.html               
-│   └── page1.html               
-├── build                        
+├── html_templates
+│   ├── index.html
+│   └── page1.html
+├── build
 │   ├── bundle.js
 │   └── index.html
-├── package.json               // npm配置文件
-└── webpack.config.js          // webpack配置文件
+├── package.json 
+└── webpack.config.js
 ```
