@@ -1,2 +1,6 @@
 import './scss/main.scss'
-import './async.js'
+import run from './async.js'
+
+run().then(email => {
+    document.getElementById('app').innerHTML = `Email: ${email}`;
+})
