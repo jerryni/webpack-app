@@ -1,5 +1,6 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const webpack = require('webpack')
 
 // 定义文件夹目录
 const ROOT_PATH = path.resolve(__dirname)
@@ -23,10 +24,15 @@ module.exports = {
         filename: '[name].[hash].js' // 他会根据entry的入口文件名称生成多个js文件
     },
 
+    devServer: {
+        hot: true
+    },
+
     module: {
+
         // css这种东西 由于node本地仅支持js加载, 所以css这种需要loader..
         rules: [{
-            test: /\.scss$/, // 注意loaders的处理顺序是从右到左的
+            test: /\.s?css$/, // 注意loaders的处理顺序是从右到左的
             use: [
                 'style-loader', // creates style nodes from JS strings
                 'css-loader', // translates CSS into CommonJS
@@ -51,6 +57,7 @@ module.exports = {
 
     // 插件, 自动生成html文件
     plugins: [
+        new webpack.HotModuleReplacementPlugin(),
         new HtmlWebpackPlugin({
             title: 'Hello World app',
             template: path.resolve(TEM_PATH, 'index.html'),
